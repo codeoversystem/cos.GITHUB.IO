@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.508);
+  backdrop-filter: blur(5px);
+}
+
+.logoinicio {
+  width: 180px;
+}
+
+#logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+  font-weight: 600;
+}
+
+.menu a {
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  padding: 6px 15px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.menu a:hover,
+a.active {
+  color: #333;
+  background: #fff;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('Imagenes/BANNER5.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#heading {
+  position: absolute;
+  top: 20%;
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 2px 4px 5px #232121;
+}
+
+.parallax img {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.card {
+  width: 70vh;
+  /* Ajusta el ancho según tus necesidades */
+  height: auto;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  /* Necesario para posicionar el contenido */
+}
+
+.card img {
+  width: 100%;
+  /* Ajusta la altura según tus necesidades */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fondo semi-transparente */
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 110%;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  padding-left: 20vh;
+  padding-right: 20vh;
+}
+
+.banner {
+
+  text-align: center;
+  font-size: 300%;
+}
+
+.recuadro-footer {
+  text-align: center;
+}
+
+.cuadro-footer {
+  width: 100%;
+  height: 70px;
+  font-size: 120%;
+}
+
+/* Para pantallas de tabletas (768px a 1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  .menu a {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+
+  .parallax {
+    height: 60vh;
+    /* Reducimos un poco el tamaño para tabletas */
+  }
+
+  .card {
+    width: 60vh;
+  }
+
+  article {
+    padding-left: 10vh;
+    padding-right: 10vh;
+  }
+
+  /* Para pantallas de móviles (hasta 768px) */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu a {
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+
+    .parallax {
+      height: 50vh;
+      /* Menor altura en móviles */
+    }
+
+    .logoinicio {
+      width: 120px;
+      /* Reducimos el tamaño del logo */
+    }
+
+    .card {
+      width: 90vw;
+      /* Cambia el ancho de las tarjetas para pantallas pequeñas */
+    }
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    article {
+      padding-left: 1vh;
+      padding-right: 1vh;
+    }
+
+    .card-content {
+      padding: 15px;
+      font-size: 100%;
+    }
+  }
+
+  /* Para pantallas muy pequeñas (hasta 480px) */
+  @media (max-width: 480px) {
+
+    .menu a {
+      font-size: 0.7em;
+    }
+
+    .card {
+      width: 90vw;
+    }
+
+    .card-content {
+      padding: 10px;
+      font-size: 90%;
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      text-align: center;
+    }

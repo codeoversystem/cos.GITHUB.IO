@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.508);
+    backdrop-filter: blur(5px);
+}
+
+.logoinicio {
+    width: 180px;
+}
+
+#logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    font-weight: 600;
+}
+
+.menu a {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    padding: 6px 15px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.menu a:hover,
+a.active {
+    color: #333;
+    background: #fff;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('Imagenes/BANNER1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.concejo1 {
+    background-image: url(Imagenes/WINDOWS.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 24vh;
+    padding-bottom: 24vh;
+    padding-left: 5vh;
+}
+
+.concejo12 {
+    background-image: url(Imagenes/OFFICE.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 24vh;
+    padding-bottom: 24vh;
+    padding-left: 5vh;
+}
+
+.concejo2 {
+    background-image: url(Imagenes/DRIVERS.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 24vh;
+    padding-bottom: 24vh;
+    padding-left: 5vh;
+}
+
+.cuadro-concejo1 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 55%;
+    padding: 30px;
+    position: absolute;
+}
+
+.texto {
+    text-align: justify;
+    font-size: 170%;
+    color: #4c4c4c;
+}
+
+.titulo1 {
+    text-align: center;
+    font-size: 250%;
+    color: #020912;
+}
+
+.link {
+    text-decoration: none;
+    color: #1653a1;
+}
+
+.link:hover {
+    color: #020912;
+}
+
+.parallax img {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+section {
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 100px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 25px;
+}
+
+p {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300
+}
+
+.contenedor {
+    overflow: hidden;
+}
+
+.recuadro {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: auto;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+
+
+.boton {
+    position: fixed;
+    /* Posicionamiento fijo en la página */
+    bottom: 22px;
+    /* Margen inferior desde el borde inferior */
+    right: 20px;
+    /* Margen derecho desde el borde derecho */
+    z-index: 100;
+    /* Asegura que el botón esté sobrepuesto a otros elementos */
+    width: 65px;
+    /* Ancho del botón */
+    height: 65px;
+    /* Altura del botón */
+    background: transparent;
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Elimina el borde por defecto */
+    cursor: pointer;
+    /* Cambia el cursor a mano al pasar el cursor sobre el botón */
+    border-radius: 35px;
+    /* Bordes redondeados */
+    text-align: center;
+    /* Alinea el texto en el centro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra para dar profundidad */
+}
+
+.boton img {
+    height: 65px;
+    transition: all 0.3s ease;
+    /* Transición suave para el cambio de imagen */
+}
+
+.boton:hover img {
+    content: url('Imagenes/whatsap.png');
+    /* Reemplaza la imagen */
+}
+
+.boton:hover {
+    background-color: #f0f0f0;
+    /* Fondo al pasar el cursor */
+    transform: scale(1.1);
+    /* Aumento de tamaño al pasar el cursor */
+}
+
+/* Para tabletas y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .menu a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+
+    .parallax {
+        height: 60vh;
+        /* Reducimos un poco el tamaño para tabletas */
+    }
+
+    .cuadro-concejo1 {
+        width: 70%;
+        /* Ajustar el ancho para pantallas más pequeñas */
+    }
+
+    .recuadro {
+        width: 100%;
+        /* Recuadros ocuparán todo el ancho en tabletas */
+        margin-left: 0;
+    }
+
+    .boton {
+        width: 55px;
+        height: 55px;
+    }
+
+    .boton img {
+        height: 55px;
+    }
+}
+
+/* Para pantallas de móviles (menos de 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        font-size: 0.8em;
+        margin-left: 10px;
+    }
+
+    .parallax {
+        height: 50vh;
+        /* Menor altura en móviles */
+    }
+
+    .logoinicio {
+        width: 120px;
+        /* Reducimos el tamaño del logo */
+    }
+
+    .cuadro-concejo1 {
+        width: 90%;
+        /* Ampliar el cuadro para usar todo el espacio en móviles */
+        padding: 20px;
+    }
+
+    .titulo1 {
+        font-size: 180%;
+        /* Reducir el tamaño de los títulos */
+    }
+
+    .texto {
+        font-size: 140%;
+    }
+
+    .recuadro {
+        width: 100%;
+        /* Recuadros a 100% del ancho en móviles */
+        margin-left: 0;
+    }
+
+    .contenedor {
+        padding: 10px;
+    }
+
+    .boton {
+        width: 50px;
+        height: 50px;
+    }
+
+    .boton img {
+        height: 50px;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 0.7em;
+    }
+
+    .titulo1 {
+        font-size: 150%;
+        /* Ajustamos los títulos a pantallas muy pequeñas */
+    }
+
+    .texto {
+        font-size: 120%;
+    }
+
+    .cuadro-concejo1 {
+        padding: 15px;
+    }
+}

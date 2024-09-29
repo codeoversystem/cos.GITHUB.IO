@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Over System - Contactanos</title>
+    <link rel="icon" href="Imagenes/MINILOGO.png">
+    <link rel="stylesheet" href="Contactanos.css">
+</head>
+
+<body>
+    <header>
+        <div><a href="index.html"><img class="logoinicio" src="Imagenes/LOGO3.png"></a></div>
+
+        <div class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="Contactanos.html" class="active">Contactanos</a>
+            <a href="Servicios.html">Servicios</a>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <form action="https://formsubmit.co/gn49893@gmail.com" method="POST">
+            <p style="font-size: 155%; color: #ffffff;">Si quieres conocer mucho más acerca de nuestros
+                servicios,<br>¡Regístrate y enseguida nos comunicaremos contigo!</p><br>
+            <label for="nombre">NOMBRE</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">CORREO ELECTRÓNICO</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="servicio">SERVICIO</label>  
+
+            <select id="servicio" name="servicio">
+                <option value="">Selecciona un servicio</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+            <input type="hidden" name="_next" value="https://codeoversystem.github.io/cos.github.io/Contactanos.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+
+        <script>
+            // JavaScript para agregar opciones al select dinámicamente
+            const selectElement = document.getElementById('servicio');
+
+            // Ejemplo de opciones:
+            const servicios = ['Mantenimiento Correctivo', 'Mantenimiento Preventivo', 'Mantenimiento Predictivo', 'Formateo de Computadoras', 'Formateo de Celulares', 'Programas y Aplicaciones', 'Soporte Técnico', 'Creación de Páginas Web'];
+
+            servicios.forEach(servicio => {
+                const option = document.createElement('option');
+                option.value = servicio;
+                option.text = servicio;
+                selectElement.appendChild(option);
+            });
+        </script>
+    </div>
+</body>
+
+</html>
